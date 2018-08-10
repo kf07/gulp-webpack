@@ -5,7 +5,7 @@
   "block-indent": "\t",
   "color-shorthand": true,
   "element-case": "lower",
-  "eof-newline": true,
+  "eof-newline": false,
   "leading-zero": false,
   "quotes": "single",
   "sort-order-fallback": "abc",

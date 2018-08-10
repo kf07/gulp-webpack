@@ -50,7 +50,7 @@ gulp.task('bs-reload', ()=> {
 
 // webpack
 gulp.task('webpack', ()=> {
-    // ☆ webpackStreamの第2引数にwebpackを渡す☆
+    gulp.src(['./src/ts/*.ts'])
     return webpackStream(webpackConfig, webpack)
         .pipe(gulp.dest('dist'));
 });
@@ -59,6 +59,7 @@ gulp.task('webpack', ()=> {
 gulp.task('default',['browser-sync'], ()=> {
     gulp.watch('src/pug/**/*.pug',['pug']);
     gulp.watch('src/**/*.js',['webpack']);
+    gulp.watch('src/**/*.ts',['webpack']);
     gulp.watch('src/**/*.scss',['sass']);
     gulp.watch('dist/**/*.html',['bs-reload']);
     gulp.watch('dist/**/*.js',['bs-reload']);
