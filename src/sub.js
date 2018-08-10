@@ -1,9 +1,14 @@
-// module.exportを使ってhello関数を定義する。
-export var hello = function (message) {
-    log(message);
-};
-function log(message) {
-    document.body.innerHTML = ("" + message);
-    console.log(message + "\u3092\u51FA\u529B\u3057\u307E\u3057\u305F\u3042\uFF53");
-}
+var Item = /** @class */ (function () {
+    function Item(name, price) {
+        this.name = name;
+        this.price = price;
+    }
+    Item.prototype.say = function (elem) {
+        if (elem) { // 引数がnullでない場合
+            elem.innerHTML = '書名：' + this.name + '  価格: ' + this.price + '円';
+        }
+    };
+    return Item;
+}());
+export { Item };
 //# sourceMappingURL=sub.js.map

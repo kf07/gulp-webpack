@@ -1,5 +1,5 @@
-const x: boolean = false;
-const y: number = 1;
-const z: string = 'hellos';
+import {Item} from './sub';
 
-console.log(x,y,z)
+const elem = document.getElementById('output');
+const aBook = new Item('はじめてのTypeScript',1980);
+aBook.say(elem);

@@ -8,6 +8,9 @@ const webpack = require('webpack');
 const cmq = require('gulp-combine-media-queries');
 const csscomb = require('gulp-csscomb');
 const plumber = require('gulp-plumber');
+const imagemin = require('gulp-imagemin');
+const pngquant = require('imagemin-pngquant');
+const mozjpeg  = require('imagemin-mozjpeg');
 
 // webpackの設定ファイルの読み込み
 const webpackConfig = require('./webpack.config');
@@ -20,6 +23,18 @@ gulp.task('pug', () => {
             pretty: true
         }))
         .pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('imagemin',() => {
+    return gulp.src('src/img/*')
+        .pipe(plumber())
+        .pipe(imagemin([
+            pngquant({ quality: '65-85', speed: 1 }),
+            mozjpeg({ quality: 85 }),
+            imagemin.svgo(),
+            imagemin.gifsicle()
+        ]))
+        .pipe(gulp.dest('./dist/assets/img/'))
 });
 
 gulp.task('sass', function () {
@@ -58,8 +73,6 @@ gulp.task('webpack', ()=> {
 // webpack
 gulp.task('default',['browser-sync'], ()=> {
     gulp.watch('src/pug/**/*.pug',['pug']);
-    gulp.watch('src/**/*.js',['webpack']);
-    gulp.watch('src/**/*.ts',['webpack']);
     gulp.watch('src/**/*.scss',['sass']);
     gulp.watch('dist/**/*.html',['bs-reload']);
     gulp.watch('dist/**/*.js',['bs-reload']);

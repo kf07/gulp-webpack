@@ -1,11 +1,11 @@
-// module.exportを使ってhello関数を定義する。
-export const hello = (message: string): void => {
+export class Item {
+    constructor(private name:string, private price:number){}
 
-    log(message);
-};
-
-function log(message: string) :void{
-    document.body.innerHTML = (`${message}`);
-
-    console.log(`${message}を出力しましたあｓ`);
+    public say(elem : HTMLElement | null) : void {
+        if(elem){ // 引数がnullでない場合
+            elem.innerHTML = '書名：' + this.name + '  価格: ' + this.price + '円';
+        }
+    }
 }
+
+
