@@ -1,5 +1,15 @@
-$bg: #ccc;
+@import "_mixin.scss";
 
-body {
-  background-color: $bg
+main {
+  background-color: #ccc;
+  @include sp-width {
+    background: #000;
+  }
+}
+
+section {
+  background-color: transparent;
+  @include sp-width {
+    background: #cccccc;
+  }
 }
