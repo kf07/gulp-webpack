@@ -49,8 +49,8 @@ gulp.task('sass', function () {
         .pipe(sass({
             outputStyle: 'expanded'
         }))
-        .pipe(cmq())
-        .pipe(csscomb())
+        // .pipe(cmq())
+        // .pipe(csscomb())
         // cssフォルダー以下に保存
         .pipe(gulp.dest('./dist/assets/css'))
 });

@@ -273,3 +273,90 @@ $values : 300px,20px,#ccc;
 
   }
 }
+
+// @if
+
+$generalStyle: true;
+
+@if $generalStyle {
+  .fl {
+    float: right;
+  }
+  .fr {
+    float: right;
+  }
+}
+
+//getStyleの値によってstyleを出し分け
+$getStyle: 1;
+
+@mixin style {
+  @if $getStyle == 1 {
+    margin: 0 0 30px;
+    padding: 15px;
+    background: #eee;
+  }
+  @else if $getStyle == 2 {
+    margin: 0 10px 15px;
+    padding: 20px 15px;
+    border: 2px solid #333;
+  }
+  @else {
+    margin: 0 0 10px;
+  }
+}
+
+.box {
+  @include style;
+}
+
+// @for
+
+//through 1-3回
+//（3を含む)
+@for $value from 1 through 3 {
+  .throughSample_#{$value} {
+    margin-bottom: 1px * $value;
+  }
+}
+
+//to 1-2回
+// (3を含まない)
+@for $value from 1 to 3 {
+  .toSample_#{$value} {
+    margin-bottom: 1px * $value;
+  }
+}
+
+@for $value from 1 through 2 {
+  .mt_#{$value * 10} {
+    margin-top: 10px * $value;
+  }
+  .mb_#{$value * 10} {
+    margin-bottom: 10px * $value;
+  }
+}
+
+//@while
+
+$value: 30;
+
+@while $value > 0 {
+  .mt_#{$value} {
+    margin-top: $value + px;
+  }
+  .mb_#{$value} {
+    margin-bottom: $value + px;
+  }
+  $value: $value - 5;
+}
+
+$value: 300;
+
+@while $value > 200 {
+  .box_#{$value} {
+    width: 2px * $value;
+  }
+  $value: $value - 32;
+}
+

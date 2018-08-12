@@ -188,3 +188,117 @@ h2 {
   property: map;
   property: function;
 }
+
+.fl {
+  float: right;
+}
+
+.fr {
+  float: right;
+}
+
+.box, .item {
+  margin: 0 0 30px;
+  padding: 15px;
+  background: #eee;
+}
+
+.throughSample_1 {
+  margin-bottom: 1px;
+}
+
+.throughSample_2 {
+  margin-bottom: 2px;
+}
+
+.throughSample_3 {
+  margin-bottom: 3px;
+}
+
+.toSample_1 {
+  margin-bottom: 1px;
+}
+
+.toSample_2 {
+  margin-bottom: 2px;
+}
+
+.mt_10 {
+  margin-top: 10px;
+}
+
+.mb_10 {
+  margin-bottom: 10px;
+}
+
+.mt_20 {
+  margin-top: 20px;
+}
+
+.mb_20 {
+  margin-bottom: 20px;
+}
+
+.mt_30 {
+  margin-top: 30px;
+}
+
+.mb_30 {
+  margin-bottom: 30px;
+}
+
+.mt_25 {
+  margin-top: 25px;
+}
+
+.mb_25 {
+  margin-bottom: 25px;
+}
+
+.mt_20 {
+  margin-top: 20px;
+}
+
+.mb_20 {
+  margin-bottom: 20px;
+}
+
+.mt_15 {
+  margin-top: 15px;
+}
+
+.mb_15 {
+  margin-bottom: 15px;
+}
+
+.mt_10 {
+  margin-top: 10px;
+}
+
+.mb_10 {
+  margin-bottom: 10px;
+}
+
+.mt_5 {
+  margin-top: 5px;
+}
+
+.mb_5 {
+  margin-bottom: 5px;
+}
+
+.box_300 {
+  width: 600px;
+}
+
+.box_268 {
+  width: 536px;
+}
+
+.box_236 {
+  width: 472px;
+}
+
+.box_204 {
+  width: 408px;
+}
