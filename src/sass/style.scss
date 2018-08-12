@@ -201,4 +201,75 @@ $values : 300px,20px,#ccc;
 }
 
 
+//at-root
+//ネストから出す
+.block {
+  .element-A {
+    width: 80%;
+  }
+  @at-root .element-B {
+    width: 10%;
+  }
+}
 
+.block {
+  width: 50%;
+  @media (max-width: 640px) {
+    width: 100%;
+    @at-root {
+      .item {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+//at-root(with:...)
+.blockA {
+  width: 50%;
+  @media (max-width: 640px) {
+    width: 100%;
+    @at-root (with: media) {
+      .itemA {
+        margin-bottom: 3px;
+      }
+    }
+  }
+}
+
+//at-root(without:...)
+.blockB {
+  width: 50%;
+  @media (max-width: 640px) {
+    width: 100%;
+    @at-root (without: media) {
+      .itemB {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+//データタイプ
+.DataTypes {
+  property: type-of(10px);
+  property: type-of(10%);
+  property: type-of(red);
+  property: type-of(sans-serif);
+  property: type-of(true);
+  property: type-of(null);
+  property: type-of(1.5em 1em 0 2em);
+  $map:(key1: value1,key2: value2);
+  property: type-of($map);
+
+  property: type-of(get-function('lighten'));
+
+}
+
+
+//データタイプがNumber型のときだけ処理を実行
+@function example($value) {
+  @if type-of($value) == number {
+
+  }
+}
