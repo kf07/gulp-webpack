@@ -1,3 +1,136 @@
+.section {
+	margin-top: 30px;
+}
+
+.item {
+	margin: 20px;
+	padding: 20px;
+}
+
 body {
+	background-image: url(/assets/img/thumb.jpg);
+}
+
+article {
+	padding: 7px;
+	width: 546px;
+}
+
+.example01 {
+	width: 508px;
+}
+
+.example02 {
+	width: 4000px;
+}
+
+.example03 {
+	width: 62.5px;
+}
+
+.example04 {
+	width: 1px;
+}
+
+article {
+	width: 488.97638px;
+}
+
+article {
+	padding: 0 7px;
+	width: 546px;
+}
+
+.box,
+.item {
+	margin: 0 0 30px;
+	padding: 15px;
+}
+
+.bd,
+.item {
+	border: 1px solid #ccc;
+}
+
+.item {
+	text-align: center;
+}
+
+.att,
+.attBox,
+.notes {
+	color: red;
+	font-weight: bold;
+}
+
+.attBox,
+.notes {
+	border: 1px solid red;
+	padding: 15px;
+}
+
+.test01,
+.test02 {
+	border: 2px solid #ccc;
+	padding: 15px;
+}
+
+.test01 {
+	margin-bottom: 20px;
+}
+
+.test02 {
+	margin-bottom: 60px;
+}
+
+.area {
+	background: #999;
+	color: #000;
+	padding: 15px;
+}
+
+.areaTest {
+	background: #999;
+	color: #000;
+	padding: 15px;
+}
+
+.boxin {
+	border-radius: 4px;
+}
+
+.itemin {
+	border: 1px solid #ccc;
+	border-radius: 5px 10px;
+}
+
+.boxA {
+	border-radius: 3px;
+}
+
+.boxB {
+	border-radius: 4px;
+}
+
+.boxA {
+	margin: 30px 0;
+	padding: 10px;
+}
+
+.boxB {
+	background: #ccc;
+	margin: 0 0 50px;
+	padding: 20px;
+}
+
+h2 {
+	text-shadow: 8px 8px 0 #999, 15px -10px 0 #eee;
+}
+
+.item {
 	background-color: #ccc;
+	border: 1px solid #ccc;
+	display: flex;
+	padding: 20px;
+	width: 300px;
 }

@@ -1,15 +1,204 @@
-@import "_mixin.scss";
+@import "mixin";
 
-main {
-  background-color: #ccc;
-  @include sp-width {
-    background: #000;
-  }
+//変数スコープ範囲
+.section {
+  $value: 30px;
+  margin-top: $value;
 }
 
-section {
-  background-color: transparent;
-  @include sp-width {
-    background: #cccccc;
-  }
+.item {
+  $value: 20px;
+  padding: $value;
+  margin: $value;
 }
+
+//変数PASS
+$IMG_PATH: '/assets/img/';
+
+body {
+  background-image: url(#{$IMG_PATH}thumb.jpg);
+}
+
+
+//演算
+
+//引き算
+article {
+  width: 560px - 14px;
+  padding: 7px;
+}
+
+//足し算
+.example01 {
+  width: 500px + 8;
+}
+
+//掛け算
+.example02 {
+  width: 500px * 8;
+}
+
+//割り算
+.example03 {
+  width: (500px/8);
+}
+
+//割り算のあまり
+.example04 {
+  width: 100px % 3;
+}
+
+//別単位演算
+article {
+  width: 300px + 5cm;
+}
+
+//変数と演算
+$main_width: 560px;
+
+article {
+  $padding: 7px;
+  width: $main_width - $padding * 2;
+  padding: 0 $padding;
+}
+
+
+//extend
+.box {
+  margin: 0 0 30px;
+  padding: 15px;
+}
+
+.bd {
+  border: 1px solid #ccc;
+}
+
+.item {
+  @extend .box;
+  @extend .bd;
+  text-align: center;
+}
+
+//extendの連鎖
+
+.att {
+  color: red;
+  font-weight: bold;
+}
+
+.attBox {
+  //.attを継承
+  @extend .att;
+  padding: 15px;
+  border: 1px solid red;
+}
+
+.notes {
+  //.attが継承されている.attBoxを継承（連鎖）
+  @extend .attBox;
+}
+
+//extend専用のプレースホルダーセレクタ
+%boxBase {
+  padding: 15px;
+  border: 2px solid #ccc;
+}
+
+.test01 {
+  @extend %boxBase;
+  margin-bottom: 20px;
+}
+
+.test02 {
+  @extend %boxBase;
+  margin-bottom: 60px;
+}
+
+
+//mixin
+
+@mixin bodySet {
+  padding: 15px;
+  background: #999;
+  color: #000;
+}
+
+.area {
+  @include bodySet;
+}
+
+.areaTest {
+  @include bodySet;
+}
+
+//mixin 引数
+
+@mixin kadomaru($value) {
+  border-radius: $value;
+}
+
+.boxin {
+  @include kadomaru(4px);
+}
+
+.itemin {
+  border: 1px solid #ccc;
+  @include kadomaru(5px 10px)
+}
+
+//mixin 引数　初期値
+
+@mixin kadomaru01($value: 3px) {
+  border-radius: $value;
+}
+
+.boxA {
+  @include kadomaru01;
+}
+
+.boxB {
+  @include kadomaru01(4px);
+}
+
+//mixin 引数　複数
+
+@mixin boxBase ($margin: 30px 0,$padding: 10px) {
+  margin: $margin;
+  padding: $padding;
+}
+
+.boxA {
+  @include boxBase;
+}
+
+.boxB {
+  @include boxBase( 0 0 50px, 20px);
+  background: #ccc;
+}
+
+// 「,」を使うプロパティには可変長引数を使用
+@mixin shadow($value...) {
+  text-shadow: $value;
+}
+
+h2 {
+  @include shadow(8px 8px 0 #999,15px -10px 0 #eee);
+}
+
+//複数の引数があるmixinを読み込む際に可変長引数を使う
+@mixin itemBase($w: 350px,$pd:15px,$bg_c: #fff,$bg_c: #ccc) {
+  width: $w;
+  padding: $pd;
+  background-color: $bg_c;
+  border: 1px solid $bg_c;
+}
+
+$values : 300px,20px,#ccc;
+
+.item {
+  display: flex;
+  @include itemBase($values...);
+}
+
+
+
