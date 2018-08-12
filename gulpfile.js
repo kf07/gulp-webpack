@@ -39,7 +39,12 @@ gulp.task('imagemin',() => {
 
 gulp.task('sass', function () {
     return gulp.src('src/sass/*.scss')
-        .pipe(plumber())
+        .pipe(plumber({
+            errorHandler: function(err) {
+                console.log(err.messageFormatted);
+                this.emit('end');
+            }
+        }))
         // Sassのコンパイルを実行
         .pipe(sass({
             outputStyle: 'expanded'
