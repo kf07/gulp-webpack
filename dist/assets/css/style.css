@@ -302,3 +302,19 @@ h2 {
 .box_204 {
   width: 408px;
 }
+
+.body-top {
+  background-image: url(/assets/img/bg_top.png);
+}
+
+.body-about {
+  background-image: url(/assets/img/bg_about.png);
+}
+
+.body-company {
+  background-image: url(/assets/img/bg_company.png);
+}
+
+.body-contact {
+  background-image: url(/assets/img/bg_contact.png);
+}

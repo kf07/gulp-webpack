@@ -360,3 +360,13 @@ $value: 300;
   $value: $value - 32;
 }
 
+//@each
+//リスト（配列)に対して繰り返し処理
+$nameList: top,about,company,contact;
+
+@each $name in $nameList {
+  .body-#{$name} {
+    background-image: url(/assets/img/bg_#{$name}.png);
+  }
+}
+
