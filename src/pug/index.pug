@@ -7,6 +7,47 @@ html(lang="ja")
         link(rel="stylesheet" href="/assets/css/style.css")
         title Hello typescript
     body
+        include template/_header
         main.main
-            a(href="#").btn.btn--primary.btn--large
+            //h2.heading 見出し
+            //    a(href="#").heading__link リンク
+            //div.heading
+            //    h2 見出し
+            //    a(href="#").heading__link リンク
+            //a(href="#").btn.btn--primary.btn--large ボタン
+            //button ボタン
+            //form.form
+            //    .form__body
+            //    .form__button
+            //        button.btn.btn--full ログイン
+            //.comment
+            //    .comment__body
+            //        .p あああああああああああああああああああああああああああああああああああ<br>ああああああああああああ
+            //    button.btn.comment__button 返信する
+            .media
+                .media__image
+                    img(src="/assets/img/thumb.jpg")
+                .media__body
+                    p 本文エリア
+            .media.media--rev
+                .media__image
+                    img(src="/assets/img/thumb.jpg")
+                .media__body
+                    p 本文あああああああああああああああああああああ
+            ul.tableview
+                li.tableview__item リスト
+                li.tableview__item リスト
+                li.tableview__item リスト
+                li.tableview__item
+                    a(href="#").tableview__target リンク
+                li.tableview__item
+                    | テキストの中に
+                    a(href="") インラインでリンク
+                    | リンク
+            .profile
+                button.save 内容を保存する
+            .contact
+                button.send 送信する
+            .tutorial
+                button.go-forword 次へ進む
     script(src="bundle.js")

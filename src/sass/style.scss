@@ -1,7 +1,6 @@
 @import "_mixin.scss";
 
 main {
-  background-color: #ccc;
   @include sp-width {
     background: #000;
   }
@@ -15,7 +14,182 @@ section {
   }
 }
 
-.btn {
-  display:inline-block;
+//.btn {
+//  display:inline-block;
+//  border-radius: 6px;
+//  text-align: center;
+//}
+//
+//.btn--primary {
+//  border-top: 2px solid #f89;
+//  border-left: 2px solid #f89;
+//  border-right: 2px solid #301;
+//  border-bottom: 2px solid #301;
+//  background-color: #c12;
+//  box-shadow: 3px 3px 2px #ccc;
+//  color: #fff;
+//}
+//
+//.btn--large {
+//  padding: 20px 20px;
+//  @include font-size(24)
+//}
+//
+//.btn--full {
+//  width: 100%;
+//}
 
+.form__button {
+  margin: auto;
+  width: 200px;
+}
+
+.comment {
+  position: relative;
+  @include font-size(16)
+}
+
+
+.comment__button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 120px;
+  @include font-size(14);
+  margin: auto;
+}
+
+.heading {
+  @include font-size(20);
+  border: 1px solid #000;
+  margin-bottom: 0.5em;
+  line-height: 42px;
+  padding: 0 0.6em;
+  font-weight: bold;
+  position: relative;
+}
+
+.heading__link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 1em;
+  @include font-size(16);
+  font-weight: normal;
+}
+
+.media {
+  display: flex;
+  width: 400px;
+  margin: auto;
+  border: 1px solid #000;
+  padding: 10px;
+}
+
+.media--rev {
+  flex-flow: row-reverse;
+}
+
+.media__image {
+  margin: 0 10px 0 0;
+}
+
+.media__body {
+  @include font-size(16)
+}
+
+.media__image > img {
+  display: block;
+  width: 200px;
+}
+
+.header {
+  @include font-size(16);
+}
+
+.nav {
+  display: flex;
+  &__item {
+    width: 100%;
+    > a {
+      display: block;
+      padding: 20px 0;
+      text-align: center;
+      text-decoration: none;
+      background-color: #49e;
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+}
+
+.tableview {
+  @include font-size(16);
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #999;
+  &__item {
+    padding: 1em;
+    background-color: #ddd;
+    > .tableview__target {
+      position: relative;
+      display: block;
+      margin: -1em;
+      padding: 1em 2.4em 1em 1em;
+      text-decoration: none;
+      &::after {
+        display: inline-block;
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0.6em;
+        margin: auto;
+        width: 8px;
+        height: 8px;
+        border-top: 1px solid #000;
+        border-right: 1px solid #000;
+        transform: rotate(45deg);
+      }
+    }
+    + .tableview__item {
+      border-top: 1px solid #eee;
+    }
+  }
+}
+
+%btn {
+  display: inline-block;
+}
+
+%btn--large {
+  @include font-size(24);
+}
+
+%btn--primary {
+  @extend %btn;
+  background-color: #428bca;
+}
+
+%btn--secondary {
+  @extend %btn;
+  background-color: #5cb85c;
+}
+
+.save {
+  @extend %btn;
+  @extend %btn--large;
+  @extend %btn--primary;
+}
+
+.send {
+  @extend %btn;
+  @extend %btn--large;
+  @extend %btn--primary;
+}
+
+.go-forword {
+  @extend %btn;
+  @extend %btn--secondary;
 }
