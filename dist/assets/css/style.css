@@ -7,6 +7,10 @@ section {
 	font-size: 1.6rem;
 }
 
+.btn {
+	display: inline-block;
+}
+
 @media screen and (max-width: 767px) {
 
 	main {
