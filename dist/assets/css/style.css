@@ -1,3 +1,19 @@
-body {
+main {
 	background-color: #ccc;
+}
+
+section {
+	background-color: transparent;
+	font-size: 1.6rem;
+}
+
+@media screen and (max-width: 767px) {
+
+	main {
+		background: #000;
+	}
+
+	section {
+		background: #ccc;
+	}
 }
