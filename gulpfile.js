@@ -11,10 +11,21 @@ const plumber = require('gulp-plumber');
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
 const mozjpeg  = require('imagemin-mozjpeg');
+const htmlbeautify = require('gulp-html-beautify');
 
 // webpackの設定ファイルの読み込み
 const webpackConfig = require('./webpack.config');
 
+// beautifiy_option
+const beautify_options = {
+    'indent_with_tabs':true
+};
+
+gulp.task('html', function() {
+    gulp.src('dist/**/*.html')
+        .pipe(htmlbeautify(beautify_options))
+        .pipe(gulp.dest('dist/'))
+});
 
 //pug
 gulp.task('pug', () => {
@@ -79,6 +90,7 @@ gulp.task('webpack', ()=> {
 gulp.task('default',['browser-sync'], ()=> {
     gulp.watch('src/pug/**/*.pug',['pug']);
     gulp.watch('src/**/*.scss',['sass']);
+    gulp.watch('dist/**/*.html',['html']);
     gulp.watch('dist/**/*.html',['bs-reload']);
     gulp.watch('dist/**/*.js',['bs-reload']);
     gulp.watch('dist/**/*.css',['bs-reload']);
