@@ -1,3 +1,13 @@
-body {
+body,html {
   font-size: 62.5%;
+}
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background:transparent none;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
