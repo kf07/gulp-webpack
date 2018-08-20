@@ -75,7 +75,7 @@ gulp.task('webpack', ()=> {
         .pipe(gulp.dest('dist'));
 });
 
-// webpack
+// default
 gulp.task('default',['browser-sync'], ()=> {
     gulp.watch('src/pug/**/*.pug',['pug']);
     gulp.watch('src/**/*.scss',['sass']);
