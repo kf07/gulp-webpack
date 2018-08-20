@@ -30,6 +30,7 @@ gulp.task('html', function() {
 //pug
 gulp.task('pug', () => {
     return gulp.src(['src/pug/**/*.pug', '!src/pug/**/_*.pug'])
+        .pipe(plumber())
         .pipe(pug({
             pretty: true
         }))
@@ -86,7 +87,7 @@ gulp.task('webpack', ()=> {
         .pipe(gulp.dest('dist'));
 });
 
-// webpack
+// default
 gulp.task('default',['browser-sync'], ()=> {
     gulp.watch('src/pug/**/*.pug',['pug']);
     gulp.watch('src/**/*.scss',['sass']);
