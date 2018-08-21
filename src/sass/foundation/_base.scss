@@ -1,6 +1,7 @@
 @import "../foundation/function/_rem";
 @import "../foundation/variable/_breakpoint";
 @import "../foundation/mixin/_mq-max";
+@import "../foundation/mixin/_mq-min";
 
 body {
   font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
@@ -13,8 +14,8 @@ body {
 }
 
 html {
-  font-size: map-get($_font-size, pc);
-  @include _mq-max {
-    font-size: map-get($_font-size, sp);
+  font-size: map-get($_font-size, sm);
+  @include _mq-min(){
+    font-size: map-get($_font-size, md);
   }
 }
