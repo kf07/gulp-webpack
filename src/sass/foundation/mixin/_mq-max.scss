@@ -1,7 +1,2 @@
 @import "../variable/_breakpoint";
 
-@mixin _mq-max {
-  @media screen and (max-width: $sp) {
-    @content;
-  }
-}

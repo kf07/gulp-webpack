@@ -1,15 +1,19 @@
-.u-d--flex {
-  display: flex;
-}
-
-.u-d--block {
-  display: block;
-}
-
-.u-d--table {
-  display: table;
-}
-
-.u-d--inline-block {
-  display: inline-block;
+.u- {
+  &d- {
+    &fx {
+      display: flex;
+    }
+    &b {
+      display: block;
+    }
+    &ib {
+      display: inline-block;
+    }
+    &tb {
+      display: table;
+    }
+    &tbc {
+      display: table-cell;
+    }
+  }
 }
