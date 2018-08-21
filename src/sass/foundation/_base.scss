@@ -1,0 +1,19 @@
+@import "../foundation/function/_rem";
+@import "../foundation/variable/_breakpoint";
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: map-get($_font-size, pc);
+  @media (max-width: $sp) {
+    font-size: map-get($_font-size, sp);
+  }
+}

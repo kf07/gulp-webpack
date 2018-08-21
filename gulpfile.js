@@ -12,6 +12,8 @@ const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
 const mozjpeg  = require('imagemin-mozjpeg');
 const htmlbeautify = require('gulp-html-beautify');
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
 
 // webpackの設定ファイルの読み込み
 const webpackConfig = require('./webpack.config');
@@ -22,7 +24,7 @@ const beautify_options = {
 };
 
 gulp.task('html', function() {
-    gulp.src('dist/**/*.html')
+    return gulp.src('dist/**/*.html')
         .pipe(htmlbeautify(beautify_options))
         .pipe(gulp.dest('dist/'))
 });
@@ -50,7 +52,7 @@ gulp.task('imagemin',() => {
 });
 
 gulp.task('sass', function () {
-    return gulp.src('src/sass/*.scss')
+    return gulp.src('src/sass/**/*.scss')
         .pipe(plumber({
             errorHandler: function(err) {
                 console.log(err.messageFormatted);
@@ -63,6 +65,14 @@ gulp.task('sass', function () {
         }))
         .pipe(cmq())
         .pipe(csscomb())
+        .pipe(postcss([
+            autoprefixer({
+                // ☆IEは11以上、Androidは4.4以上
+                // その他は最新2バージョンで必要なベンダープレフィックスを付与する設定
+                browsers: ["last 2 versions", "ie >= 11", "Android >= 4"],
+                cascade: false
+            })
+        ]))
         // cssフォルダー以下に保存
         .pipe(gulp.dest('./dist/assets/css'))
 });
