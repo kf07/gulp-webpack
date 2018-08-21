@@ -14,13 +14,7 @@ body {
 
 html {
   font-size: map-get($_font-size, pc);
-  @media screen and (max-width: $sp) {
-    font-size: map-get($_font-size, sp);
-  }
-}
-
-.foo {
   @include _mq-max {
-    color: #fff;
+    font-size: map-get($_font-size, sp);
   }
 }
