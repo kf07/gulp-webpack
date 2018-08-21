@@ -1,5 +1,6 @@
 @import "../foundation/function/_rem";
 @import "../foundation/variable/_breakpoint";
+@import "../foundation/mixin/_mq-max";
 
 body {
   font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
@@ -13,7 +14,13 @@ body {
 
 html {
   font-size: map-get($_font-size, pc);
-  @media (max-width: $sp) {
+  @media screen and (max-width: $sp) {
     font-size: map-get($_font-size, sp);
+  }
+}
+
+.foo {
+  @include _mq-max {
+    color: #fff;
   }
 }
