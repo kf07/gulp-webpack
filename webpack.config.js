@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
     // モード値を production に設定すると最適化された状態で、
     // development に設定するとソースマップ有効でJSファイルが出力される
@@ -7,6 +9,7 @@ module.exports = {
     entry: "./src/main.ts",
     // 出力ファイル
     output: {
+        path: path.resolve(__dirname, 'dist/assets/js'),
         filename: "bundle.js"
     },
     module: {
