@@ -3,17 +3,48 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<title>トップページ</title>
+	<meta content="トップページです" name="description">
+	<meta content="トップページ" name="keywords">
+	<meta content="トップページ" property="og:title">
+	<meta content="トップページです" property="og:description">
+	<meta content="https://example.com/assets/img/ogp.jpg" property="og:image">
+	<meta content="https://example.com/index.html" property="og:url">
+	<meta content="website" property="og:type">
+	<meta content="ja_JP" property="og:locale">
 	<link rel="stylesheet" href="/assets/css/common.css">
-	<title>Hello typescript</title>
 </head>
 
-<body>
-	<main class="main">
-		<div class="foo">テスト</div>
-	</main>
-	<footer class="l-footer"></footer>
+<body class="top">
+	<div class="l_contents">
+		<header class="l-header">
+			<div class="l-header__container">
+				<div class="header_logo">
+					<h1><a href="index.html"><img src="/assets/img/shared/header_logo.png" alt="トップページ"></a></h1>
+				</div>
+			</div>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="content_a.html"><img src="/assets/img/shared/nav_content_a.png" alt="コンテントA"></a></li>
+				<li><a href="content_b.html"><img src="/assets/img/shared/nav_content_b.png" alt="コンテントB"></a></li>
+				<li><a href="content_c.html"><img src="/assets/img/shared/nav_content_c.png" alt="コンテントC"></a></li>
+				<li><img src="/assets/img/shared/nav_content_d_comingsoon.png" alt="コンテントD Coming Soon..."></li>
+			</ul>
+		</nav>
+		<h2>page.title</h2>
+		<div class="keyvisual_container">
+			<p class="keyvisual_image"><img src="/assets/img/top/top_keyvisual.jpg" alt=""></p>
+		</div>
+	</div>
+	<footer class="l-footer">
+		<div class="l-footer__container"></div>
+		<p><small>copyright</small></p>
+	</footer>
+	<script type="text/javascript" src="/assets/js/bundle.js"></script>
 </body>
-<script src="bundle.js"></script>
 
 </html>
