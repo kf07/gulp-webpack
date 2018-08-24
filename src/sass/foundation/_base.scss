@@ -19,3 +19,22 @@ html {
     font-size: map-get($_font-size, md);
   }
 }
+
+.menu {
+  display: flex;
+}
+
+.menu__item {
+  border-bottom: 1px solid black;
+}
+
+.menu__item--emphasis {
+  font-size: _rem(20px);
+  font-weight: bold;
+  font-style: italic;
+}
+
+.box {
+  padding: 10px;
+
+}
