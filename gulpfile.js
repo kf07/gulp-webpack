@@ -19,6 +19,7 @@ const webpackConfig = require('./webpack.config');
 //pug
 gulp.task('pug', () => {
     return gulp.src(['src/pug/**/*.pug', '!src/pug/**/_*.pug'])
+        .pipe(plumber())
         .pipe(pug({
             pretty: true
         }))

@@ -50,4 +50,19 @@ html(lang="ja")
                 button.send 送信する
             .tutorial
                 button.go-forword 次へ進む
+
+            .alert
+                p.alert__title アラートメッセージのタイトル
+                .alert__body
+                    p アラートメッセージの本文
+
+            .alert.alert--warning
+                p.alert__title アラートメッセージのタイトル
+                .alert__body
+                    ul
+                        li アラートメッセージのリスト
+                        li アラートメッセージのリスト
+            my-alert
+                p 段落
+
     script(src="bundle.js")

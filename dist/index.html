@@ -8,7 +8,80 @@
     <title>Hello typescript</title>
   </head>
   <body>
-    <main class="main"><a class="btn btn--primary btn--large" href="#"></a></main>
+    <header class="header">
+      <h1 class="sitettl">Pugテストサイトタイトル</h1>
+      <nav>
+        <ul class="nav">
+          <li class="nav__item"><a href="#">Top</a></li>
+          <li class="nav__item"><a href="#">About</a></li>
+          <li class="nav__item"><a href="#">Works</a></li>
+          <li class="nav__item"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <!--h2.heading 見出し-->
+      <!--    a(href="#").heading__link リンク-->
+      <!--div.heading-->
+      <!--    h2 見出し-->
+      <!--    a(href="#").heading__link リンク-->
+      <!--a(href="#").btn.btn--primary.btn--large ボタン-->
+      <!--button ボタン-->
+      <!--form.form-->
+      <!--    .form__body-->
+      <!--    .form__button-->
+      <!--        button.btn.btn--full ログイン-->
+      <!--.comment-->
+      <!--    .comment__body-->
+      <!--        .p あああああああああああああああああああああああああああああああああああ<br>ああああああああああああ-->
+      <!--    button.btn.comment__button 返信する-->
+      <div class="media">
+        <div class="media__image"><img src="/assets/img/thumb.jpg"></div>
+        <div class="media__body">
+          <p>本文エリア</p>
+        </div>
+      </div>
+      <div class="media media--rev">
+        <div class="media__image"><img src="/assets/img/thumb.jpg"></div>
+        <div class="media__body">
+          <p>本文あああああああああああああああああああああ</p>
+        </div>
+      </div>
+      <ul class="tableview">
+        <li class="tableview__item">リスト</li>
+        <li class="tableview__item">リスト</li>
+        <li class="tableview__item">リスト</li>
+        <li class="tableview__item"><a class="tableview__target" href="#">リンク</a></li>
+        <li class="tableview__item">テキストの中に<a href="">インラインでリンク</a>リンク</li>
+      </ul>
+      <div class="profile">
+        <button class="save">内容を保存する</button>
+      </div>
+      <div class="contact">
+        <button class="send">送信する</button>
+      </div>
+      <div class="tutorial">
+        <button class="go-forword">次へ進む</button>
+      </div>
+      <div class="alert">
+        <p class="alert__title">アラートメッセージのタイトル</p>
+        <div class="alert__body">
+          <p>アラートメッセージの本文</p>
+        </div>
+      </div>
+      <div class="alert alert--warning">
+        <p class="alert__title">アラートメッセージのタイトル</p>
+        <div class="alert__body">
+          <ul>
+            <li>アラートメッセージのリスト</li>
+            <li>アラートメッセージのリスト</li>
+          </ul>
+        </div>
+      </div>
+      <my-alert>
+        <p>段落</p>
+      </my-alert>
+    </main>
   </body>
   <script src="bundle.js"></script>
 </html>

@@ -193,3 +193,27 @@ section {
   @extend %btn;
   @extend %btn--secondary;
 }
+
+.alert {
+  @include font-size(16)
+  position: relative;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background-color: #efefef;
+  padding: 0.6em 0.8em;
+  &--warning {
+    border-color: #faebcc;
+    background-color: #fcf8e3;
+  }
+  &--error {
+    border-color: #ebccd1;
+    background-color: #f2dede;
+  }
+  &--success {
+    border-color: #d6e9c6;
+    background-color: #dff0d8;
+  }
+  &__title {
+    font-weight: bold;
+  }
+}

@@ -1,14 +1,179 @@
-main {
-	background-color: #ccc;
-}
-
 section {
 	background-color: transparent;
 	font-size: 1.6rem;
 }
 
-.btn {
+.form__button {
+	margin: auto;
+	width: 200px;
+}
+
+.comment {
+	font-size: 1.6rem;
+	position: relative;
+}
+
+.comment__button {
+	bottom: 0;
+	display: block;
+	font-size: 1.4rem;
+	margin: auto;
+	position: absolute;
+	right: 0;
+	width: 120px;
+}
+
+.heading {
+	border: 1px solid #000;
+	font-size: 2rem;
+	font-weight: bold;
+	line-height: 42px;
+	margin-bottom: .5em;
+	padding: 0 .6em;
+	position: relative;
+}
+
+.heading__link {
+	bottom: 0;
+	font-size: 1.6rem;
+	font-weight: normal;
+	position: absolute;
+	right: 1em;
+	top: 0;
+}
+
+.media {
+	border: 1px solid #000;
+	display: flex;
+	margin: auto;
+	padding: 10px;
+	width: 400px;
+}
+
+.media--rev {
+	flex-flow: row-reverse;
+}
+
+.media__image {
+	margin: 0 10px 0 0;
+}
+
+.media__body {
+	font-size: 1.6rem;
+}
+
+.media__image > img {
+	display: block;
+	width: 200px;
+}
+
+.header {
+	font-size: 1.6rem;
+}
+
+.nav {
+	display: flex;
+}
+
+.nav__item {
+	width: 100%;
+}
+
+.nav__item > a {
+	background-color: #49e;
+	color: #fff;
+	display: block;
+	font-weight: bold;
+	padding: 20px 0;
+	text-align: center;
+	text-decoration: none;
+}
+
+.tableview {
+	border: 1px solid #999;
+	border-radius: 8px;
+	font-size: 1.6rem;
+	overflow: hidden;
+}
+
+.tableview__item {
+	background-color: #ddd;
+	padding: 1em;
+}
+
+.tableview__item > .tableview__target {
+	display: block;
+	margin: -1em;
+	padding: 1em 2.4em 1em 1em;
+	position: relative;
+	text-decoration: none;
+}
+
+.tableview__item > .tableview__target::after {
+	border-right: 1px solid #000;
+	border-top: 1px solid #000;
+	bottom: 0;
+	content: '';
 	display: inline-block;
+	height: 8px;
+	margin: auto;
+	position: absolute;
+	right: .6em;
+	top: 0;
+	transform: rotate(45deg);
+	width: 8px;
+}
+
+.tableview__item + .tableview__item {
+	border-top: 1px solid #eee;
+}
+
+.save,
+.send,
+.go-forword {
+	display: inline-block;
+}
+
+.save,
+.send {
+	font-size: 2.4rem;
+}
+
+.save,
+.send {
+	background-color: #428bca;
+}
+
+.go-forword {
+	background-color: #5cb85c;
+}
+
+.alert {
+	background-color: #efefef;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	font-size: 1.6rem;
+	padding: .6em .8em;
+	position: relative;
+}
+
+.alert--warning {
+	background-color: #fcf8e3;
+	border-color: #faebcc;
+}
+
+.alert--error {
+	background-color: #f2dede;
+	border-color: #ebccd1;
+}
+
+.alert--success {
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+}
+
+.alert__title {
+	font-weight: bold;
 }
 
 @media screen and (max-width: 767px) {
