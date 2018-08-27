@@ -2,16 +2,13 @@
 // Foundation
 // ==========================================================================
 
-@import "foundation/_reset";
-@import "foundation/_base";
+@import "foundation/**";
 
 // ==========================================================================
 // Layout
 // ==========================================================================
 
-@import "layout/_footer";
-@import "layout/_header";
-@import "layout/_main";
+@import "layout/**";
 
 // ==========================================================================
 // Object
@@ -21,22 +18,17 @@
 // Component
 // -----------------------------------------------------------------
 
-@import "object/component/_button";
-@import "object/component/_media";
+@import "object/component/**";
 
 // -----------------------------------------------------------------
 // Project
 // -----------------------------------------------------------------
 
-@import "object/project/_articles";
-@import "object/project/_profile";
+@import "object/project/**";
 
 
 // -----------------------------------------------------------------
 // Utility
 // -----------------------------------------------------------------
 
-@import "object/utility/_text";
-@import "object/utility/_display";
-@import "object/utility/_flex";
-@import "object/utility/_width";
+@import "object/utility/**";

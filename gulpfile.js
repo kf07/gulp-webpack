@@ -14,6 +14,7 @@ const mozjpeg  = require('imagemin-mozjpeg');
 const htmlbeautify = require('gulp-html-beautify');
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
+const sassGlob = require("gulp-sass-glob");
 
 // webpackの設定ファイルの読み込み
 const webpackConfig = require('./webpack.config');
@@ -59,6 +60,7 @@ gulp.task('sass', function () {
                 this.emit('end');
             }
         }))
+        .pipe(sassGlob())
         // Sassのコンパイルを実行
         .pipe(sass({
             outputStyle: 'expanded'
