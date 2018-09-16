@@ -21,29 +21,35 @@
 <body class="top">
 	<div class="l_contents">
 		<header class="l-header">
-			<div class="l-header__container">
-				<div class="header_logo">
-					<h1><a href="index.html"><img src="/assets/img/shared/header_logo.png" alt="トップページ"></a></h1>
-				</div>
+			<div class="header__container">
+				<h1 class="header__logo">ロゴ</h1>
 			</div>
 		</header>
-		<nav>
-			<ul>
-				<li><a href="content_a.html"><img src="/assets/img/shared/nav_content_a.png" alt="コンテントA"></a></li>
-				<li><a href="content_b.html"><img src="/assets/img/shared/nav_content_b.png" alt="コンテントB"></a></li>
-				<li><a href="content_c.html"><img src="/assets/img/shared/nav_content_c.png" alt="コンテントC"></a></li>
-				<li><img src="/assets/img/shared/nav_content_d_comingsoon.png" alt="コンテントD Coming Soon..."></li>
-			</ul>
-		</nav>
-		<h2>page.title</h2>
-		<div class="keyvisual_container">
-			<p class="keyvisual_image"><img src="/assets/img/top/top_keyvisual.jpg" alt=""></p>
+		<!--nav-->
+		<!--    ul.u-d-fx.u-jc-sb.u-bc-blue-->
+		<!--        li.u-text-center.u-w-25.p-nav-->
+		<!--            a(href=pages.content_a.url).u-color-white.u-d-b #{pages.content_a.name}-->
+		<!--        li.u-text-center.u-w-25.p-nav-->
+		<!--            a(href=pages.content_b.url).u-color-white.u-d-b #{pages.content_b.name}-->
+		<!--        li.u-text-center.u-w-25.p-nav-->
+		<!--            a(href=pages.content_c.url).u-color-white.u-d-b #{pages.content_c.name}-->
+		<!--        if content_d_state=="public"-->
+		<!--            li.u-text-center.u-w-25.p-nav-->
+		<!--                a(href=pages.content_d.url).u-color-white.u-d-b #{pages.content_d.name}-->
+		<!--        else if content_d_state=="comingsoon"-->
+		<!--            li-->
+		<!--                img(src=image_path+"/shared/nav_content_d_comingsoon.png" alt=pages.content_d.name+" Coming Soon...")-->
+		<div id="app">
+			<h2>page.title
+				<p>{{ message }}</p>
+			</h2>
 		</div>
 	</div>
 	<footer class="l-footer">
 		<div class="l-footer__container"></div>
 		<p><small>copyright</small></p>
 	</footer>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 	<script type="text/javascript" src="/assets/js/bundle.js"></script>
 </body>
 

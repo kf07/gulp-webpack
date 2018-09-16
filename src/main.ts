@@ -1,5 +1,8 @@
-import {Item} from './sub';
+import Vue from 'vue'
 
-const elem = document.getElementById('output');
-const aBook = new Item('はじめてのTypeScript',1980);
-aBook.say(elem);
+const App = new Vue({
+    el: '#app',
+    data: {
+        message: 'Hello Vue.js'
+    }
+});

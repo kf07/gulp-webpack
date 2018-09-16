@@ -6,7 +6,6 @@ block vars
     - var page = pages[key]
 
 block contents
-    h2 page.title
-    .keyvisual_container
-        p.keyvisual_image
-            img(src=image_path+"/top/top_keyvisual.jpg", alt="")
+    #app
+        h2 page.title
+            p {{ message }}
