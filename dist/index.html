@@ -42,7 +42,16 @@
 		<main class="main">
 			<div id="app">
 				<h2>page.title</h2>
-				<p>{{ message }}</p>
+				<ul class="tabMenu">
+					<li class="tabMenu__item" @click="isSelect('1')">All</li>
+					<li class="tabMenu__item" @click="isSelect('2')">2</li>
+					<li class="tabMenu__item" @click="isSelect('3')">3</li>
+				</ul>
+				<div class="tabContents">
+					<div class="tabContents__block" v-show="isActive === '1'">こんてんつ１</div>
+					<div class="tabContents__block" v-show="isActive === '2'">こんてんつ2</div>
+					<div class="tabContents__block" v-show="isActive === '3'">こんてんつ3</div>
+				</div>
 			</div>
 		</main>
 	</div>

@@ -19,3 +19,24 @@ html {
     font-size: map-get($_font-size, md);
   }
 }
+
+.tabMenu {
+  display: flex;
+}
+
+.tabMenu__item {
+  width: 40px;
+  border-right: 1px solid #000;
+  background-color: #f00;
+  padding: 15px 0;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.tabContents {
+  width: 400px;
+  height: 300px;
+  border: 1px solid #000000;
+  padding: 10px;
+}
