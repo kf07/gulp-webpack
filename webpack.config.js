@@ -26,7 +26,11 @@ module.exports = {
     resolve: {
         extensions: [
             '.ts'
-        ]
+        ],
+        alias: {
+            // vue.js のビルドを指定する
+            vue: 'vue/dist/vue.common.js'
+        }
     },
     watch: true
 
